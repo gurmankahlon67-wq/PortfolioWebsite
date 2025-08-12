@@ -1,32 +1,212 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Contact - Gurman Kahlon</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - Gurman Kahlon Portfolio</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+  /* Reset and base styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    /* Navigation */
+    nav {
+      background-color: #2a2a72;
+      padding: 12px 0;
+      box-shadow: 0 2px 8px rgba(42, 42, 114, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links li {
+      margin: 0 18px;
+    }
+    .nav-link {
+      color: #f9f9f9;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    .nav-link:hover,
+    .nav-link:focus {
+      color: #ffc107;
+      outline: none;
+    }
+    /* Main container */
+    .container {
+      flex-grow: 1;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px 20px;
+      background-color: #1f1f1f;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+      animation: fadeInScale 0.8s ease forwards;
+    }
+    h1 {
+      text-align: center;
+      color: #ffc107;
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: block;
+      color: #f0e68c;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: inherit;
+      background-color: #e8e8e8;
+      color: #121212;
+      transition: box-shadow 0.25s ease;
+      resize: vertical;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    textarea:focus {
+      outline: none;
+      box-shadow: 0 0 10px 3px #ffc107;
+      background-color: #fff;
+    }
+    textarea {
+      min-height: 120px;
+    }
+    button {
+      padding: 14px 25px;
+      background-color: #ffc107;
+      border: none;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #2a2a72;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover,
+    button:focus {
+      background-color: #e6ac00;
+      outline: none;
+    }
+    @keyframes fadeInScale {
+      0% {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    /* Responsive */
+    @media (max-width: 640px) {
+      .container {
+        margin: 25px 15px;
+        padding: 25px 15px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+
 </head>
 <body>
-    <header>
-        <h1>Gurman Kahlon</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About Me</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
 
-    <main>
-        <h2>Contact Me</h2>
-        <p>You can reach me via the following:</p>
-        <ul>
-            <li>Email: <a href="mailto:gurmankahlon99@gmail.com">gurmankahlon99@gmail.com</a></li>
-            <li>Phone: <a href="tel:6477398259">647-739-8259</a></li>
-        </ul>
-    </main>
+  <main class="container">
+    <h1>Contact Me</h1>
+    <form action="#" method="POST" novalidate>
+      <label for="name">Your Name</label>
+      <input 
+        type="text" 
+        id="name" 
+        name="name" 
+        placeholder="Your Name" 
+        required 
+        minlength="2"
+        maxlength="50"
+        aria-required="true"
+      />
 
-    <footer>
-        <p>&copy; 2025 Gurman Kahlon. All rights reserved.</p>
-    </footer>
+      <label for="email">Email</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        placeholder="Your Email Address" 
+        required 
+        aria-required="true"
+      />
+
+      <label for="phone">Your Telephone</label>
+      <input 
+        type="tel" 
+        id="phone" 
+        name="phone" 
+        placeholder="10-digit Phone Number" 
+        pattern="\d{10}"
+        title="Please enter a 10-digit phone number"
+        aria-required="false"
+      />
+
+      <label for="message">Your Message</label>
+      <textarea 
+        id="message" 
+        name="message" 
+        placeholder="Type Your Message Here.." 
+        required 
+        minlength="10"
+        maxlength="500"
+        aria-required="true"
+      ></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
 </body>
 </html>
+<section class="social-contact">
+  <h2>Connect with Me</h2>
+  <p>Email: <a href="mailto:gurmankahlon99@gmail.com" target="_blank" rel="noopener">gurmankahlon99@gmail.com</a></p>
+  <p>Instagram: <a href="https://www.instagram.com/gurmankahlon99/" target="_blank" rel="noopener">instagram.com/gurmankahlon99</a></p>
+  <p>LinkedIn: <a href="http://www.linkedin.com/in/gurman-kahlon-7353b9234" target="_blank" rel="noopener">linkedin.com/in/gurman-kahlon-7353b9234</a></p>
+</section>

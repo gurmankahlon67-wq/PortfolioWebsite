@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects - Gurman Kahlon Portfolio</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    /* Reset and base styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.5;
+    }
+    /* Navigation styles */
+    nav {
+      background-color: #2a2a72;
+      padding: 12px 0;
+      box-shadow: 0 2px 8px rgba(42, 42, 114, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links li {
+      margin: 0 18px;
+    }
+    .nav-link {
+      color: #f9f9f9;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    .nav-link:hover,
+    .nav-link:focus {
+      color: #ffc107;
+      outline: none;
+    }
+    /* Main container */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    /* Project section */
+    .project {
+      margin-bottom: 60px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-out;
+      animation-duration: 0.8s;
+    }
+    .project.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Project Title */
+    .project h2 {
+      color: #2a2a72;
+      font-size: 1.8rem;
+      margin: 20px 0 12px;
+      text-align: center;
+    }
+    /* Images container per project */
+    .project-images {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    .project-images img {
+      width: 100%;     /* Full container width */
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 6px 14px rgba(42,42,114,0.15);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .project-images img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 25px rgba(42,42,114,0.3);
+    }
+    /* Project description */
+    .project-description {
+      font-size: 1.1rem;
+      color: #4a4a4a;
+      max-width: 850px;
+      margin: 0 auto;
+      text-align: justify;
+    }
+    /* Responsive */
+    @media (max-width: 640px) {
+      .container {
+        margin: 20px 15px;
+        padding: 0 10px;
+      }
+      .project h2 {
+        font-size: 1.5rem;
+        margin: 15px 0 10px;
+      }
+      .project-description {
+        font-size: 1rem;
+        max-width: 100%;
+      }
+    }
+    /* Fade-in animation on scroll */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About Me</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+
+    <section class="project" id="project1">
+      <h2>Project 1: Interface Design for "Sahiba"</h2>
+      <div class="project-images">
+        <img src="images/Project1.1.jpg" alt="Interface design for Sahiba 1" />
+        <img src="images/Project1.2.jpg" alt="Interface design for Sahiba 2" />
+        <img src="images/Project1.3.jpg" alt="Interface design for Sahiba 3" />
+      </div>
+      <p class="project-description">
+        The "Sahiba" interface project exemplifies my passion for creating visually pleasing yet user-friendly designs.
+        Drawing inspiration from the graceful and elegant nature of the name Sahiba, I crafted an interface that blends 
+        modern minimalism with subtle artistic flourishes. The design focuses on clarity and ease of navigation, 
+        utilizing a calm color palette and intuitive iconography to engage users effectively. This project highlights 
+        my ability to balance aesthetics with functionality, producing an interface that is both beautiful and practical.
+        The layout adapts gracefully across devices, ensuring a seamless user experience whether on desktop or mobile. 
+      </p>
+    </section>
+
+    <section class="project" id="project2">
+      <h2>Project 2: Instagram Graphics - "Stuff Happens, Chew Up The Stress"</h2>
+      <div class="project-images">
+        <img src="images/project2.1.png" alt="Instagram graphic Stuff Happens" />
+        <img src="images/project2.2.png" alt="Instagram graphic Stuff Happens" />
+        <img src="images/project2.3.png" alt="Instagram graphic Stuff Happens" />
+        
+      </div>
+      <p class="project-description">
+        In this Instagram graphic design project, I aimed to visually express the relatable sentiment "Stuff happens, 
+        chew up the stress" with a lively and playful approach. The artwork combines bold typography with vibrant colors 
+        and engaging illustrations that invite viewers to pause and reflect. Through this design, I explored the dynamic 
+        use of contrast and layering to capture attention on social media platforms. The graphic was tailored to fit 
+        Instagram’s format perfectly, ensuring maximum visibility and engagement. This project underscores my skills 
+        in creating compelling social media visuals that effectively communicate messages and connect emotionally with audiences.
+      </p>
+    </section>
+
+    <section class="project" id="project3">
+      <h2>Project 3: Advertising Brochure for Bose Headphones</h2>
+      <div class="project-images">
+        <img src="images/Project3.1.jpg" alt="Bose Headphones brochure cover" />
+        <img src="images/Project3.2.jpg" alt="Bose Headphones brochure inside pages" />
+        <img src="images/project3.3.jpg" alt="Bose Headphones brochure inside pages" />
+      </div>
+      <p class="project-description">
+        This advertising brochure for Bose headphones showcases my capability in crafting elegant marketing materials that 
+        merge high-quality imagery with persuasive content. The brochure layout highlights the superior sound quality and 
+        sleek design of the product while maintaining brand consistency. I strategically used typography, white space, 
+        and visual hierarchy to guide the reader’s focus through features and benefits. The project demanded attention 
+        to detail and a comprehensive understanding of the brand’s identity, resulting in a polished and professional brochure 
+        that appeals to audiophiles and tech enthusiasts alike.
+      </p>
+    </section>
+
+    <section class="project" id="project4">
+      <h2>Project 4: Cookie Packaging Label Design</h2>
+      <div class="project-images">
+        <img src="images/Project4.1.jpg" alt="Cookie packaging label design" />
+        <img src="images/Project4.2.jpg" alt="Cookie packaging label design" />
+        <img src="images/Project 4.3.jpg" alt="Cookie packaging label design" />
+      </div>
+      <p class="project-description">
+        Designing the outer label for the cookie packaging was a creative endeavor to merge visual appeal with product 
+        storytelling. I focused on creating an inviting design that instantly communicates the cookie’s flavor and freshness. 
+        Using warm, appetizing colors and playful typography, the label attracts attention on shelves while maintaining 
+        clarity and brand identity. The design also includes all necessary regulatory information in a visually balanced 
+        manner. This project highlights my attention to detail and ability to design packaging that connects with consumers
+        and enhances product desirability.
+      </p>
+    </section>
+
+    <section class="project" id="project5">
+      <h2>Project 5: Fruity Juice Can Packaging Graphics</h2>
+      <div class="project-images">
+        <img src="images/project5.1.png" alt="Fruity juice can packaging design" />
+        <img src="images/project5.2.jpg" alt="Fruity juice can packaging design" />
+        <img src="images/project5.3.jpg" alt="Fruity juice can packaging design" />
+      </div>
+      <p class="project-description">
+        For the fruity juice can packaging, I developed a bold and vibrant graphic design that captures the refreshing 
+        nature of the product. By incorporating bright colors, dynamic shapes, and fruit illustrations, the can stands out 
+        on the shelf and appeals to health-conscious consumers. The design balances eye-catching elements with clean layouts 
+        to maintain product information readability. This packaging design project reflects my skills in branding and 
+        graphic design specifically tailored for the FMCG and beverage market sectors.
+      </p>
+    </section>
+
+  </div>
+
+  <script>
+    // Simple fade-in on scroll for project sections
+    const projects = document.querySelectorAll('.project');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    projects.forEach(project => {
+      observer.observe(project);
+    });
+  </script>
+</body>
+</html>

@@ -2,37 +2,119 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gurman Kahlon | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome - My Portfolio</title>
+  <link rel="stylesheet" href="/css/index.css">
+  <style>
+    /* Global Reset */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f7fa;
+      color: #2a2a72;
+    }
+    /* Navigation Bar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #2a2a72;
+      padding: 14px 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(42, 42, 114, 0.3);
+    }
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #f9f9f9;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover,
+    nav ul li a:focus {
+      color: #ffc107;
+      outline: none;
+    }
+    /* Main container */
+    .container {
+      max-width: 720px;
+      background: white;
+      margin: 140px auto 80px; /* Add margin top to offset fixed nav */
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(42,42,114,0.1);
+      text-align: center;
+      animation: fadeInSlide 1s ease forwards;
+    }
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 24px;
+      font-weight: 700;
+      color: #2a2a72;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #4a4a4a;
+      margin-bottom: 0;
+      white-space: pre-wrap; /* preserve line breaks */
+    }
+    /* Animation */
+    @keyframes fadeInSlide {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      .container {
+        margin: 110px 15px 40px;
+        padding: 30px 20px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <header>
-    <h1>Gurman Kahlon</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="resume.pdf" target="_blank">Resume</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-  <main>
-    <section class="hero">
-      <img src="images/Profile picture.png" alt="Profile Picture of Gurman Kahlon" />
-      <div class="intro">
-        <h2>Hello, I'm Gurman</h2>
-        <p>I’m a web designer & developer passionate about creating user-friendly and accessible websites. Welcome to my portfolio!</p>
-      </div>
-    </section>
+  <!-- Main Content -->
+  <main class="container" role="main" aria-label="Welcome introduction">
+    <h1>Hello, Welcome to my portfolio</h1>
+    <p>
+      Hi, I’m Gurman Kahlon—a graphic designer who believes every design should feel as good as it looks. My work lives at the sweet spot between clean minimalism and subtle playfulness, where elegance meets personality. I love bringing ideas to life in a way that’s simple, intentional, and a little bit unexpected—whether it’s a brand identity, packaging, or a digital design. For me, design isn’t just about making something pretty; it’s about creating visuals that tell a story, spark curiosity, and leave a lasting impression.
+    </p>
   </main>
-
-  <footer>
-    <p>&copy; 2025 Gurman Kahlon. All rights reserved.</p>
-  </footer>
 
 </body>
 </html>
